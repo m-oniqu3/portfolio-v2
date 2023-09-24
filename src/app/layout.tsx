@@ -4,7 +4,7 @@ import "./globals.css";
 
 // Font files can be colocated inside of `app`
 const myFont = localFont({
-  src: "./satoshi/Satoshi-Light.otf",
+  src: "./satoshi/Satoshi-Regular.otf",
   display: "swap",
 });
 
