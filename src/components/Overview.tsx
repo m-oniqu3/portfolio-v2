@@ -4,7 +4,7 @@ import { satoshiBlack, satoshiBold } from "@/components/utils/font";
 const Overview = () => {
   return (
     <section className="relative">
-      <Container className="flex flex-col items-center justify-center h-[70vh] overflow-x-hidden">
+      <Container className="flex flex-col items-center justify-center h-[90dvh] overflow-x-hidden">
         <article className=" w-full max-w-4xl ">
           <p
             className={`${satoshiBlack.className} tracking-widest text-9xl flex justify-between`}
