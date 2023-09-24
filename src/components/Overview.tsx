@@ -3,38 +3,24 @@ import { satoshiBlack, satoshiBold } from "@/components/utils/font";
 
 const Overview = () => {
   return (
-    <section className="relative overflow-x-hidden">
-      <Container className="flex flex-col items-center justify-center h-[70vh] relative">
-        <article className=" w-full h-fit max-w-[900px] ">
+    <section className="relative">
+      <Container className="flex flex-col items-center justify-center h-[70vh] overflow-x-hidden">
+        <article className=" w-full max-w-4xl ">
           <p
-            className={`${satoshiBlack.className}  text-strokeClamp relative flex justify-between`}
+            className={`${satoshiBlack.className} tracking-widest text-9xl flex justify-between`}
           >
             {String("hello world")
               .split("")
               .map((letter, index) => (
-                <span
-                  key={index}
-                  className="stroked relative top-4 md:top-8 lg:top-12"
-                >
+                <span key={index} className="stroked">
                   {letter}
                 </span>
               ))}
-            {/* <span className="stroked text-justify text-strokeClamp ">
-              hello world
-            </span> */}
           </p>
         </article>
         <article className="flex flex-col gap-2 max-w-[600px] md:gap-1">
-          {/* <p
-            className={`${satoshiBlack.className}  text-strokeClamp tracking-wide absolute top-36 left-0 w-full grid -z-10`}
-          >
-            <span className="place-self-stretch md:place-self-center stroked">
-              hello world
-            </span>
-          </p> */}
-
           <h1
-            className={`${satoshiBlack.className}  font-bold text-secondary text-clamp`}
+            className={`${satoshiBlack.className} font-bold text-secondary text-clamp`}
           >
             Hi, I&rsquo;m Monique.
           </h1>
