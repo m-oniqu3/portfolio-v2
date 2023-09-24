@@ -4,10 +4,18 @@
 
 
 * {
-  color: #fff;
+  color: #a2a2a2;
   ;
 }
 
 body {
   background-color: #191919;
+}
+
+@layer utilities {
+  .stroked {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(48, 48, 48, 0.25);
+    /* -webkit-text-stroke: 1px #a2a2a2; */
+  }
 }

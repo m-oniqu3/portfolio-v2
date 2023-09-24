@@ -1,10 +1,11 @@
+import { TailwindIndicator } from "@/components/utils/tailwind-indicator";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
 // Font files can be colocated inside of `app`
-const myFont = localFont({
-  src: "./satoshi/Satoshi-Regular.otf",
+const satoshi = localFont({
+  src: "./satoshi/Satoshi-Light.otf",
   display: "swap",
 });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body className={satoshi.className}>
+        {children}
+        <TailwindIndicator />
+      </body>
     </html>
   );
 }

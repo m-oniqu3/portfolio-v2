@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <nav className="h-[10vh] grid place-items-center">
       <Container className="flex justify-between items-center">
-        <p className={`${satoshiBold.className} text-2xl tracking-[4px]`}>
+        <p
+          className={`${satoshiBold.className} text-secondary text-2xl tracking-[4px]`}
+        >
           &#x2f;&#x2f;m
         </p>
 
