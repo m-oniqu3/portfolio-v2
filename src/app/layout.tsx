@@ -1,5 +1,5 @@
 import { TailwindIndicator } from "@/components/utils/tailwind-indicator";
-import SectionContextProvider from "@/context/contexts";
+import SectionContextProvider from "@/context/context";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
