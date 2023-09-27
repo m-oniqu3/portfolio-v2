@@ -2,9 +2,13 @@
 
 import { satoshiBlack } from "@/components/utils/font";
 import { useSectionContext } from "@/context/context";
+import { useRef } from "react";
 
 const Header = () => {
-  const { sections, currentSection } = useSectionContext();
+  const { sections, currentSection, isContentVisible } = useSectionContext();
+  const ref = useRef<HTMLElement>(null);
+
+  console.log(isContentVisible);
 
   const renderSections = sections.map((section, index) => {
     const { id, name } = section;
@@ -16,12 +20,12 @@ const Header = () => {
         style={{
           transform: `translateX(${(index - currentSection) * 100}%)`,
         }}
-        className={`${satoshiBlack.className} absolute top-0 h-56 w-screen text-7xl transition duration-500 `}
+        className={`${satoshiBlack.className} absolute top-0 h-full w-screen text-7xl transition duration-500 md:text-8xl`}
       >
-        <h1 className="absolute top-5 text-8xl w-screen -z-10 grid place-items-center">
-          <span className="stroked tracking-widest w-fit">#{name}</span>
+        <h1 className="absolute top-5 text-8xl w-screen -z-10 grid place-items-center md:text-[10rem]">
+          <span className="stroked tracking-widest w-fit">{name}</span>
         </h1>
-        <h1 className={`grid place-items-center h-full text-secondary`}>
+        <h1 className={`flex items-end justify-center h-full text-secondary`}>
           {name}
         </h1>
       </article>
@@ -29,7 +33,11 @@ const Header = () => {
   });
 
   return (
-    <header className="h-56 w-screen relative flex overflow-hidden">
+    <header
+      ref={ref}
+      className={`h-[20vh] w-screen relative flex overflow-hidden bg-gray-700
+      `}
+    >
       {renderSections}
     </header>
   );

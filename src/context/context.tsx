@@ -21,6 +21,8 @@ type SectionContext = {
   maxSections: number;
   nextSection: () => void;
   prevSection: () => void;
+  isContentVisible: boolean;
+  setIsContentVisible: Dispatch<SetStateAction<boolean>>;
 };
 
 export const SectionContext = createContext<SectionContext | null>(null);
@@ -34,6 +36,8 @@ export default function SectionContextProvider(props: Props) {
     { id: 2, name: "skills" },
     { id: 3, name: "contact" },
   ];
+
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   const [currentSection, setCurrentSection] = useState(0);
   const maxSections = sections.length - 1;
@@ -55,6 +59,8 @@ export default function SectionContextProvider(props: Props) {
     maxSections,
     nextSection,
     prevSection,
+    isContentVisible,
+    setIsContentVisible,
   };
 
   return (
