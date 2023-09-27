@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 import Container from "@/components/ui/Container";
 import { useSectionContext } from "@/context/context";
 
@@ -40,6 +41,7 @@ const Content = () => {
     >
       <Container className=" h-[80vh] pt-8 ">
         <About />
+        <Skills />
       </Container>
     </div>
   );

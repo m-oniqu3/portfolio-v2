@@ -1,15 +1,16 @@
+import Section from "@/components/Section";
 import { satoshiBold } from "@/components/utils/font";
 import { Fragment } from "react";
 
 const About = () => {
   return (
-    <section className="h-[80vh] grid place-items-center ">
+    <Section id={0}>
       <article>
         <Fragment>
           <h1 className={`${satoshiBold.className} text-3xl text-secondary`}>
             Monique McIntyre
           </h1>
-          <p className="text-secondary">Frontend Developer</p>
+          <p className="">Frontend Developer</p>
         </Fragment>
         <br></br>
         <Fragment>
@@ -27,7 +28,7 @@ const About = () => {
           <p className={`opacity-50 text-sm`}>&#60;&#47;article&#62;</p>
         </Fragment>
       </article>
-    </section>
+    </Section>
   );
 };
 
