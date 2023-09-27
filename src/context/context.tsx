@@ -31,7 +31,7 @@ export default function SectionContextProvider(props: Props) {
   const { children } = props;
 
   const sections: Section[] = [
-    { id: 0, name: "about" },
+    { id: 0, name: "about me." },
     { id: 1, name: "projects" },
     { id: 2, name: "skills" },
     { id: 3, name: "contact" },
